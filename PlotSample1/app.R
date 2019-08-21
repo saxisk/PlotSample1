@@ -27,7 +27,7 @@ ui <- fluidPage(
 
         # Show a plot of the generated distribution
         mainPanel(
-           plotOutput("distPlot")
+           plotOutput("Couscous Plot")
         )
     )
 )
@@ -41,7 +41,7 @@ server <- function(input, output) {
         bins <- seq(min(x), max(x), length.out = input$bins + 1)
 
         # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'yellow', border = 'cyan')
+        hist(x, breaks = bins, col = 'yellow', border = 'purple')
     })
 }
 
