@@ -21,8 +21,8 @@ ui <- fluidPage(
             sliderInput("bins",
                         "Number of bins:",
                         min = 1,
-                        max = 50,
-                        value = 30)
+                        max = 70,
+                        value = 70)
         ),
 
         # Show a plot of the generated distribution
@@ -38,10 +38,10 @@ server <- function(input, output) {
     output$distPlot <- renderPlot({
         # generate bins based on input$bins from ui.R
         x    <- faithful[, 2]
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
+        bins <- seq(min(x), max(x), length.out = input$bins + 2)
 
         # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'green', border = 'blue')
+        hist(x, breaks = bins, col = 'black', border = 'yellow')
     })
 }
 
