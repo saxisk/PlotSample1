@@ -27,7 +27,7 @@ shinyUI(fluidPage(
     
     # Show a plot of the generated distribution
     mainPanel(
-      plotlyOutput("Couscous Plot")
+      plotOutput("Couscous Plot")
     )
   )
 ))

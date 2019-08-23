@@ -12,7 +12,7 @@ library(shiny)
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
   
-  output$distPlot <- renderPlotly({
+  output$distPlot <- renderPlot({
     # generate bins based on input$bins from ui.R
     x    <- faithful[, 2]
     bins <- seq(min(x), max(x), length.out = input$bins + 1)
