@@ -10,10 +10,10 @@
 library(shiny)
 
 # Define UI for application that draws a histogram
-ui <- fluidPage(
+shinyUI(fluidPage(
   
   # Application title
-  titlePanel("Old Faithful Geyser Data"),
+  titlePanel("Private Dev test for PMI"),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
@@ -27,7 +27,7 @@ ui <- fluidPage(
     
     # Show a plot of the generated distribution
     mainPanel(
-      plotOutput("Couscous Plot")
+      plotlyOutput("Couscous Plot")
     )
   )
-)
+))

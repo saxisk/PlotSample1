@@ -10,14 +10,14 @@
 library(shiny)
 
 # Define server logic required to draw a histogram
-server <- function(input, output) {
+shinyServer(function(input, output) {
   
-  output$distPlot <- renderPlot({
+  output$distPlot <- renderPlotly({
     # generate bins based on input$bins from ui.R
     x    <- faithful[, 2]
     bins <- seq(min(x), max(x), length.out = input$bins + 1)
     
     # draw the histogram with the specified number of bins
-    hist(x, breaks = bins, col = 'yellow', border = 'purple')
+    hist(x, breaks = bins, col = 'blue', border = 'black')
   })
-}
+})
